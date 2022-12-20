@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+
+	<link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+
+    <button  onclick="zip()" class="submit3" style=" height: 200px ; width:20%; position: absolute; top: 600px; left:1170px;   box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    "
+  
+ > Письмо 1</button>
+
+
+ <nav class="navbar">
+  <div class="container">
+<a href="#" class="navbar-brand" onclick="showHeader()">   CripTracks</a>
+<div class="navbar-wrap">
+  <ul class="navbar-menu">
+    <li><a href="index.html">  Home</a></li>
+    <li><a href="Photo.html">   Photo</a></li>
+	<li><a href="https://vk.com/audios179253924?z=audio_playlist179253924_35"> My playlist</a></li>
+  </ul>
+  </div>
+  
+  
+<a href="https://vk.com/artemfot1" class="callback">Связь со мной</a>
+  </div>
+
+ </nav>
+<div class="first">
+    <div class = "title1"> 
+      Мой сайт
+    </div>
+</div>
+<div class="message"  style="border: 18px">
+  <div style="width: 100%; line-height: 3;">
+    <div class="out">  </div>
+  </div>
+  
+</div>
+<input type="text" class="txt" style=" width: 290px ;margin-top: 1100px; margin-left: 10px;" >
+<button  onclick="bt(); document.querySelector('.txt').value = ''" class="submit" style="z-index: -1;
+top:1100px;
+left: 190px;"> Sent</button>
+<button  onclick="clear1()" class="submit1" style="z-index: -1;
+top:1100px;
+left: 230px;"> del</button>
+
+<button  onclick="save()" class="submit2" style="z-index: -1;
+top:1100px;
+left: 900px;"> Save</button>
+
+</body>
+
+</html>
+<script>
+    let g = 'enter:', u ;
+    let j="";
+    let k = 0;
+    let letter1 , listing;
+    function zip() {
+      document.querySelector('.out').innerHTML =listing;
+    }
+  function bt()
+  {
+  u = "bh"
+    let a = document.querySelector('.txt').value;
+    j=  document.querySelector('.out').innerHTML += a + '\n' +"\r\n" ;
+    localStorage.setItem('text', j.toString())
+ 
+   g = localStorage.getItem('text')
+  
+
+  }
+
+  g = localStorage.getItem('text')
+  if(u = "bh"){
+    document.querySelector('.out').innerHTML = g + '\n' ;
+  }
+   function clear1()
+   {
+    j=" ";
+    g= " "
+    document.querySelector('.out').innerHTML = "Enter:  "
+    localStorage.removeItem('text')
+    localStorage.setItem('text', "Enter:")
+
+   
+   }
+
+  function showHeader() {
+    
+    while (window.pageYOffset > 10) 
+    {
+      pageYOffset -=1;
+    }
+  }
+  function save()
+  {
+letter1 = g;
+localStorage.setItem('letter', letter1.toString())
+
+  }
+
+  listing = localStorage.getItem('letter');
+  console.log(listing)
+
+
+
+</script>
